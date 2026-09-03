@@ -322,7 +322,9 @@
     { text: "A year from now you may wish you had started today.", source: "Karen Lamb" }
   ];
   function pickQuote(){
-    return QUOTES[Math.floor(Math.random() * QUOTES.length)];
+    const today = new Date();
+    const dayKey = today.getFullYear() * 10000 + (today.getMonth() + 1) * 100 + today.getDate();
+    return QUOTES[dayKey % QUOTES.length];
   }
 
   const daysEl = document.getElementById('days');
