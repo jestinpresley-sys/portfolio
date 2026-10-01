@@ -337,6 +337,36 @@
   .terminal-out.accent{ color: var(--amber); }
   .contact-cta{ display: flex; gap: 12px; margin-top: 24px; flex-wrap: wrap; font-family: 'Space Grotesk', sans-serif; }
 
+  .contact-form-card{
+    background: var(--bg-panel); border: 1px solid var(--border); border-radius: var(--radius);
+    padding: 26px 28px 28px; margin-top: 20px;
+  }
+  .form-eyebrow{
+    font-family: 'JetBrains Mono', monospace; font-size: 12.5px; color: var(--text-faint);
+    margin: 0 0 20px;
+  }
+  .form-field{ margin-bottom: 16px; }
+  .form-field label{
+    display: block; font-family: 'JetBrains Mono', monospace; font-size: 12.5px;
+    color: var(--text-dim); margin-bottom: 6px;
+  }
+  .form-field input, .form-field textarea{
+    width: 100%; background: var(--bg); border: 1px solid var(--border); border-radius: 8px;
+    padding: 10px 12px; color: var(--text); font-family: 'Inter', sans-serif; font-size: 14px;
+    outline: none; transition: border-color 0.15s ease;
+  }
+  .form-field input:focus, .form-field textarea:focus{ border-color: var(--teal); }
+  .form-field textarea{ resize: vertical; min-height: 100px; }
+  .hp-field{ position: absolute; left: -9999px; top: -9999px; }
+  .form-status{
+    margin: 16px 0 0; font-size: 13.5px; font-family: 'JetBrains Mono', monospace;
+    display: none;
+  }
+  .form-status.show{ display: block; }
+  .form-status.ok{ color: var(--teal); }
+  .form-status.err{ color: var(--rose); }
+  .contact-form button[disabled]{ opacity: 0.6; cursor: default; }
+
   .socials{ display: flex; gap: 16px; margin-top: 40px; }
   .social-link{
     display: inline-flex; align-items: center; gap: 8px; text-decoration: none;
