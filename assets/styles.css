@@ -101,7 +101,7 @@
   .tab.active{ color: var(--amber); border-bottom-color: var(--amber); }
   .tab .ext{ opacity: 0.55; }
 
-  section{ padding: 88px 0 0; }
+  section{ padding: 88px 0 0; scroll-margin-top: 90px; }
   section:last-of-type{ padding-bottom: 96px; }
 
   .eyebrow{
@@ -387,6 +387,85 @@
   .reveal{ opacity: 0; transform: translateY(14px); transition: opacity 0.5s ease, transform 0.5s ease; }
   .reveal.in{ opacity: 1; transform: translateY(0); }
 
+  /* ---------- small business page (plain-language, no code framing) ---------- */
+  .sb-hero{ padding-top: 48px; }
+  .sb-hero h1{
+    font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 36px; line-height: 1.2;
+    margin: 0 0 16px; max-width: 640px;
+  }
+  .sb-subhead{ font-size: 16.5px; color: var(--text-dim); max-width: 50ch; margin: 0 0 28px; }
+  .hero-alt-link{
+    display: inline-block; margin-top: 18px;
+    font-family: 'JetBrains Mono', monospace; font-size: 13px; color: var(--text-dim);
+    text-decoration: none; border-bottom: 1px solid transparent;
+    transition: color 0.15s ease, border-color 0.15s ease;
+  }
+  .hero-alt-link:hover{ color: var(--amber); border-color: var(--amber); }
+
+  .problem-grid{
+    display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px;
+    margin-top: 32px;
+  }
+
+  .steps-row{ display: flex; gap: 16px; margin-top: 32px; }
+  .step{
+    flex: 1; background: var(--bg-panel); border: 1px solid var(--border); border-radius: var(--radius);
+    padding: 22px 20px;
+  }
+  .step-num{
+    width: 30px; height: 30px; border-radius: 50%;
+    background: var(--amber); color: #171208;
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 14px;
+    margin-bottom: 14px;
+  }
+  .step h3{ font-family: 'Space Grotesk', sans-serif; font-size: 16.5px; margin: 0 0 6px; }
+  .step p{ margin: 0; font-size: 13.5px; color: var(--text-dim); }
+
+  .ba-grid{
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;
+    margin-top: 32px;
+  }
+  .ba-card{
+    background: var(--bg-panel); border: 1px solid var(--border); border-radius: var(--radius);
+    overflow: hidden;
+  }
+  .ba-images{ display: grid; grid-template-columns: 1fr 1fr; }
+  .ba-images figure{ margin: 0; position: relative; }
+  .ba-images img{
+    width: 100%; aspect-ratio: 4 / 3; object-fit: cover; display: block;
+    background: var(--bg-panel-2);
+  }
+  .ba-images figcaption{
+    position: absolute; top: 8px; left: 8px;
+    font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.05em; text-transform: uppercase;
+    background: rgba(16,20,27,0.75); color: var(--text); padding: 3px 8px; border-radius: 4px;
+  }
+  .ba-body{ padding: 16px 18px 20px; }
+  .ba-body h3{ font-family: 'Space Grotesk', sans-serif; font-size: 15.5px; margin: 0 0 6px; }
+  .ba-body p{ margin: 0; font-size: 13px; color: var(--text-dim); }
+
+  .testimonial-card{
+    background: var(--bg-panel); border: 1px dashed var(--border); border-radius: var(--radius);
+    padding: 28px; margin-top: 32px;
+  }
+  .placeholder-badge{
+    display: inline-block; font-family: 'JetBrains Mono', monospace; font-size: 11px;
+    color: var(--rose); border: 1px solid var(--rose); padding: 2px 9px; border-radius: 999px;
+    margin-bottom: 14px;
+  }
+  .testimonial-card blockquote{
+    margin: 0 0 14px; font-family: 'Space Grotesk', sans-serif; font-size: 18px; font-style: italic; color: var(--text);
+  }
+  .testimonial-card cite{ font-style: normal; font-family: 'JetBrains Mono', monospace; font-size: 12.5px; color: var(--text-faint); }
+
+  .sb-closing{ text-align: center; }
+  .sb-closing h2{ font-size: 28px; }
+  .sb-closing p{ color: var(--text-dim); font-size: 15px; max-width: 48ch; margin: 14px auto 24px; }
+  .sb-location{
+    margin-top: 16px; font-family: 'JetBrains Mono', monospace; font-size: 12.5px; color: var(--text-faint);
+  }
+
   @media (max-width: 720px){
     .about-grid{ grid-template-columns: 1fr; gap: 28px; }
     .cap-grid{ grid-template-columns: 1fr; }
@@ -397,4 +476,9 @@
     .code-body{ font-size: 13px; grid-template-columns: 32px 1fr; padding-top: 22px; }
     section{ padding-top: 64px; }
     .hero{ padding-top: 44px; }
+    .sb-hero{ padding-top: 36px; }
+    .sb-hero h1{ font-size: 27px; }
+    .problem-grid{ grid-template-columns: 1fr; }
+    .steps-row{ flex-direction: column; }
+    .ba-grid{ grid-template-columns: 1fr; }
   }

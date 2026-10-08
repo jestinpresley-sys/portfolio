@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <rect width="800" height="600" fill="#1B222D"/>
+  <rect x="1" y="1" width="798" height="598" fill="none" stroke="#262E3A" stroke-width="2"/>
+  <text x="400" y="280" font-family="JetBrains Mono, monospace" font-size="20" letter-spacing="2" fill="#5FC9B8" text-anchor="middle" text-transform="uppercase">AFTER</text>
+  <text x="400" y="320" font-family="Space Grotesk, sans-serif" font-size="26" fill="#8B93A1" text-anchor="middle">Therapy &amp; Life-Coaching Practice</text>
+  <text x="400" y="360" font-family="JetBrains Mono, monospace" font-size="13" fill="#5B6472" text-anchor="middle">placeholder — swap this file</text>
+</svg>

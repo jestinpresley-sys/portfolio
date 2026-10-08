@@ -14,6 +14,7 @@ const contactForm = document.getElementById('contactForm');
 if (contactForm) {
   const statusEl = document.getElementById('formStatus');
   const submitBtn = contactForm.querySelector('button[type="submit"]');
+  const submitLabel = submitBtn.textContent;
 
   const showStatus = (msg, ok) => {
     statusEl.textContent = msg;
@@ -42,7 +43,7 @@ if (contactForm) {
       showStatus('Something went wrong — try emailing me directly instead.', false);
     } finally {
       submitBtn.disabled = false;
-      submitBtn.textContent = 'Send message →';
+      submitBtn.textContent = submitLabel;
     }
   });
 }
